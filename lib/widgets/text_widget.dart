@@ -1,7 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_project_struct/core/utils/size_utils.dart';
 
 class TextWidget extends StatelessWidget {
   final String text;
@@ -21,7 +21,7 @@ class TextWidget extends StatelessWidget {
     return Text(
       text ,
       style: TextStyle(
-        fontSize: fontSize.sp ,
+        fontSize: fontSize.fSize ,
         color: fontColor,
         fontWeight: fontWeight
       ),

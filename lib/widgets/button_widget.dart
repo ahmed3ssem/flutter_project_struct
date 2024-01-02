@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_struct/core/utils/app_colors.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_project_struct/core/utils/size_utils.dart';
 
 class ButtonWidget extends StatelessWidget {
   final double width;
@@ -23,7 +23,7 @@ class ButtonWidget extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12), // <-- Radius
         ),
-        minimumSize: Size(ScreenUtil().setWidth(width), ScreenUtil().setHeight(height)),
+        minimumSize: Size(width.h, height.v),
         backgroundColor: AppColors.primaryColor,
         textStyle: const TextStyle(color: AppColors.whiteColor,
         ),
@@ -31,7 +31,7 @@ class ButtonWidget extends StatelessWidget {
       onPressed: onTap,
       child: Text(
         name,
-        style: TextStyle(fontSize: 16.sp , fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 16.fSize , fontWeight: FontWeight.bold),
       ),
     );
   }

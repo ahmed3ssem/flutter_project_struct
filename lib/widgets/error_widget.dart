@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_struct/core/utils/app_colors.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_project_struct/core/utils/size_utils.dart';
 import 'package:get/get.dart';
 
 class ErrorWidgetItem extends StatelessWidget {
@@ -15,16 +15,16 @@ class ErrorWidgetItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Center(
-          child: Icon(Icons.warning_amber_rounded , size: 150.sp, color: AppColors.primaryColor,),
+          child: Icon(Icons.warning_amber_rounded , size: 150.adaptSize, color: AppColors.primaryColor,),
         ),
         Container(
           margin:const EdgeInsets.symmetric(vertical: 12),
-          child: Text('somethingWentWrong'.tr , style: TextStyle(color: Colors.black , fontWeight: FontWeight.w700 , fontSize: 20.sp),),
+          child: Text('somethingWentWrong'.tr , style: TextStyle(color: Colors.black , fontWeight: FontWeight.w700 , fontSize: 20.fSize),),
         ),
-        Text('pleaseTryAgain'.tr , style:  TextStyle(color: AppColors.grey , fontSize: 18.sp , fontWeight: FontWeight.w500),),
+        Text('pleaseTryAgain'.tr , style:  TextStyle(color: AppColors.grey , fontSize: 18.fSize , fontWeight: FontWeight.w500),),
         Container(
           width: context.width*0.55,
-          height: ScreenUtil().setHeight(55),
+          height: 55.v,
           margin:const EdgeInsets.symmetric(vertical: 15),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -36,7 +36,7 @@ class ErrorWidgetItem extends StatelessWidget {
                 )
             ),
             onPressed: onTap,
-            child: Text('reloadScreen'.tr , style: TextStyle(fontWeight: FontWeight.bold , color: Colors.white , fontSize: 20.sp),),
+            child: Text('reloadScreen'.tr , style: TextStyle(fontWeight: FontWeight.bold , color: Colors.white , fontSize: 20.fSize),),
           ),
         )
       ],

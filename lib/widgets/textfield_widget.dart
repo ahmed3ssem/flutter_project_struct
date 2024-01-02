@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_struct/core/utils/app_colors.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_project_struct/core/utils/size_utils.dart';
 
 class TextFieldWidget extends StatefulWidget {
   final double height;
@@ -45,12 +45,12 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
         keyboardType: widget.keyboardType,
         obscureText: passwordVisible,
         style: TextStyle(
-          fontSize: 17.sp,
+          fontSize: 17.fSize,
           color: AppColors.black,
           fontWeight: FontWeight.w500
         ),
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(vertical: widget.height , horizontal: 10.sp),
+          contentPadding: EdgeInsets.symmetric(vertical: widget.height , horizontal: 10.fSize),
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(width: 1, color: AppColors.grey), //<-- SEE HERE
             borderRadius: BorderRadius.circular(10.0),
