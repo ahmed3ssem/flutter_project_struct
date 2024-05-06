@@ -6,14 +6,14 @@ class SVGImageWidget extends StatelessWidget {
   final String image;
   final double height;
   final double width;
-  const SVGImageWidget({Key? key , required this.image , required this.width , required this.height}) : super(key: key);
+  const SVGImageWidget({super.key , required this.image , required this.width , required this.height});
 
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
         image,
-        height: height.v,
-        width: width.h,
+        height: height.h,
+        width: width.w,
     );
   }
 }

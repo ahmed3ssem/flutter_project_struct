@@ -9,12 +9,12 @@ class ButtonWidget extends StatelessWidget {
   final String name;
 
   const ButtonWidget({
-    Key? key,
+    super.key,
     required this.width,
     required this.height,
     required this.onTap,
     required this.name,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class ButtonWidget extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12), // <-- Radius
         ),
-        minimumSize: Size(width.h, height.v),
+        minimumSize: Size(width.w, height.h),
         backgroundColor: AppColors.primaryColor,
         textStyle: const TextStyle(color: AppColors.whiteColor,
         ),

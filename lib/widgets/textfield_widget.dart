@@ -12,7 +12,7 @@ class TextFieldWidget extends StatefulWidget {
   final TextInputType keyboardType;
 
   const TextFieldWidget({
-    Key? key,
+    super.key,
     required this.height,
     required this.width,
     required this.controller,
@@ -20,7 +20,7 @@ class TextFieldWidget extends StatefulWidget {
     this.hintText,
     required this.isPasswordTextField,
     required this.keyboardType,
-  }) : super(key: key);
+  });
 
   @override
   State<TextFieldWidget> createState() => _TextFieldWidgetState();

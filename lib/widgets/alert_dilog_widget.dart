@@ -20,7 +20,7 @@ class AlertDialogWidget{
             content: Text(title.tr , style: TextStyle(fontWeight: FontWeight.w500 , fontSize: 15.fSize),),
             actions: <Widget>[
               Container(
-                margin: EdgeInsets.only(top: 10.v , left: 8.h, right: 15.h),
+                margin: EdgeInsets.only(top: 10.h , left: 8.w, right: 15.w),
                 child: InkWell(
                     onTap: yesOnTap,
                     child: Text("yes".tr , style: TextStyle(fontWeight: FontWeight.w700 , fontSize: 14.fSize , color: Colors.green),)
@@ -28,7 +28,7 @@ class AlertDialogWidget{
               ),
               SizedBox(width: 8.h,),
               Container(
-                margin: EdgeInsets.only(top: 10.v , right: 15.h),
+                margin: EdgeInsets.only(top: 10.h , right: 15.w),
                 child: InkWell(
                     onTap: (){
                       Navigator.of(context).pop(true);
